@@ -1,7 +1,39 @@
 img {
-	width: auto;
+	width: 100%;
+	margin: auto;
 }
 
-body {
-	margin: 30px 100px;
+.body {
+	width: 100%;
+	margin: auto;
+}
+
+.title {
+	color: #5B5B5F;
+	font-size: .65em;
+	font-family: 'Roboto', sans-serif;
+	margin: 0 0 0 3%;
+}
+
+.body-section {
+	background-color: #EEE;
+	text-align: center;
+}
+
+.body-section h1 {
+	color: #525252;
+	font-size: 1.9em;
+	font-family: 'Roboto Slab', serif;
+}
+
+.body-section .answer-section {
+	padding: 20px 0 80px 0;
+}
+
+.body-section p {
+	color: #717171;
+	font-size: .5em;
+	text-align: justify;
+	padding: 20px 0 0 0;
+
 }
