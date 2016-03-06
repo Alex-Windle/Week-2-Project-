@@ -1,1 +1,96 @@
+img {
+  width: 100%;
+  margin: auto; }
 
+.title {
+  color: #5B5B5F;
+  font-size: .65em;
+  font-family: 'Roboto', sans-serif;
+  margin: 0 0 0 3%; }
+
+.body-section {
+  background-color: #eaeaea; }
+
+.body-section h1 {
+  color: #525252;
+  font-size: 1.9em;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 55px;
+  line-height: .5;
+  text-align: center; }
+
+.body-section h1 span {
+  display: inline-block;
+  position: relative; }
+
+.body-section h1 span::before,
+.body-section h1 span::after {
+  content: " ";
+  position: absolute;
+  height: 5px;
+  border-bottom: 1px solid #C4C4C4;
+  top: 10%;
+  width: 500px; }
+
+.body-section h1 span::before {
+  right: 100%;
+  margin-right: 15px; }
+
+.body-section h1 span::after {
+  left: 100%;
+  margin-left: 15px; }
+
+.body-section .answer-section {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding: 20px 0 80px 0; }
+
+.body-section .answer-section #answerOne {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.body-section .answer-section #answerTwo {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.body-section .answer-section #answerThree {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.body-section .answer-section #answerFour {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.body-section .answer-section #answerFive {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.body-section .answer-section #answerSix {
+  color: #717171;
+  font-size: 1.1em;
+  font-family: 'Roboto', sans-serif;
+  display: inline-block; }
+
+.footer {
+  background-color: #4B494F;
+  height: 100px;
+  position: relative; }
+
+.footer .copyright {
+  color: #808080;
+  font-size: .85em;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  margin-left: -60px; }

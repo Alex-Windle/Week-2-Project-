@@ -1,3 +1,5 @@
+$grey: #C4C4C4;
+
 img {
 	width: 100%;
 	margin: auto;
@@ -11,7 +13,8 @@ img {
 }
 
 .body-section {
-	background-color: #EEE;
+	// background-color: #EEE;
+	background-color: lighten($grey, 15%);
 }
 
 .body-section h1 {
@@ -33,7 +36,7 @@ img {
 	content: " ";
 	position: absolute;
 	height: 5px;
-	border-bottom: 1px solid gray;
+	border-bottom: 1px solid #C4C4C4;
 	top: 10%;
 	width: 500px;
 }
@@ -105,8 +108,9 @@ img {
 
 .footer .copyright {
 	color: #808080;
+	font-size: .85em;
 	position: absolute;
 	bottom: 20%;
 	left: 50%;
-	margin-left: -70px;
+	margin-left: -60px;
 }
