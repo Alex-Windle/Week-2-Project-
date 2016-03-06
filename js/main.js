@@ -6,7 +6,6 @@
 
 var avgPrice = items.reduce(function(totalPrice, currentProduct){
 	 var sum = totalPrice + currentProduct.price;
-	 // console.log(sum);
 	return sum;
 },0);
 // 			var avg = avgPrice/items.length;
@@ -24,7 +23,7 @@ var a = document.getElementById("answerOne");
 // 			console.log('Answer One:', a);
 a.innerHTML = "The average price is $" + avgFinal + "."; 
 
-console.log('1. Average price of items------->', avg.toFixed(2));
+// console.log('1. Average price of items------->', avg.toFixed(2));
 
 
 // 2. get an array of items costing between $14-18 USD
@@ -162,7 +161,7 @@ var itemsBySeller = items.filter(function(currentItem){
 
 });
 
-console.log('6. Items made by seller--------->', itemsBySeller);
+// console.log('6. Items made by seller--------->', itemsBySeller);
 
 var messageToDisplay = itemsBySeller.length + " were made by their sellers.";
 
