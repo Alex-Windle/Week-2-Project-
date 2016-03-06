@@ -50,7 +50,7 @@ var finalList = items.filter(function(currentItem){
 var fullNameList = finalList.map(function(currentObject){
 	return currentObject.title;
 });
-			// var fullNameListBreaks = fullNameList.split(',');
+//				 var fullNameListBreaks = fullNameList.split(',');
 // 				console.log(fullNameList);
 
 //				*problem: line breaks btw items*
@@ -66,7 +66,7 @@ var fullNameList = finalList.map(function(currentObject){
 //				use arr.toString method?
 //				use text nodes?
 var b = document.getElementById("answerTwo");
-b.innerHTML = fullNameList.join("\n");
+b.innerHTML = fullNameList.join("<br>" + "<br>");
 
 // 3. Which item has GBP currency code? Display name & price. 
 // "items" is an array of objects. each object has a property "currency_code" with value "USD" or "GBP".
@@ -89,26 +89,8 @@ var finalStatement = itemsInGBP.map(function(currentThing){
 var d = document.getElementById("answerThree");
 d.innerHTML = finalStatement;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // 4. Display all items made of wood. 
-// I want to target each object's property, "materials".
+// 			I want to target each object's property, "materials".
 //         Then, target the array inside "materials". 
 //         Then, search each array index for value "wood". 
 // 			use the .filter method on the array items to filter out all items with value wood. 
@@ -126,10 +108,10 @@ var finalDisplay = woodItems.map(function(currentItem){
 });
 
 var e = document.getElementById('answerFour');
-e.innerHTML = finalDisplay;
+e.innerHTML = finalDisplay.join("<br>" + "<br>");
 
 // 5. which items are made of 8+ materials? Display NAME, # OF ITEMS, and the ITEMS ITS MADE OF
-// I want to target each object's property, "materials". 
+// 			I want to target each object's property, "materials". 
 // 			Then, target the array inside "materials"
 //			Count the number of items in the array using arr.length
 //			Return items that have an arr.length >= 8
@@ -142,17 +124,35 @@ var items8Materials = items.filter(function(currentItem){
 
 // Create new var--> materials list
 // Display message
-var finalDisplayMessage = items8Materials.map(function(currentItem){
-	return currentItem.title + " has " + currentItem.materials.length + " materials:" + currentItem.materials.toString();
+					// var finalDisplayMessage = items8Materials.map(function(currentItem){
+					// 	return currentItem.title + " has " + currentItem.materials.length + " materials:" + currentItem.materials.toString();
+					// });
+
+					// console.log('5. Items with 8+ materials------->', items8Materials);
+// display message needs 2 components: 
+//		var1 =currentItem + "has" + length + "materials:"
+//		var2 = currentItem.materials.toString().
+var h = items8Materials.map(function(currentItem){
+	var materialsList = currentItem.materials;
+	return materialsList.join("<br>" + "<br>");
 });
 
-console.log('5. Items with 8+ materials------->', items8Materials);
+var itemsDisplayTitle = items8Materials.map(function(currentItem){
+	var materialsGrab = currentItem.materials;
+	var materialsDisplay = materialsGrab.join('<br>');
+	return currentItem.title + " has " + currentItem.materials.length + " materials: " + "<br>" + "<br>" + materialsDisplay;
+});
+
+// var itemsFinalDisplay = itemsDisplayTitle.map(function(currentItem){
+// 	return currentItem + ;
+// });
 
 var f = document.getElementById('answerFive');
-f.innerHTML = finalDisplayMessage;
+f.innerHTML = itemsDisplayTitle.join('<br>' + '<br>');
+						// f.innerHTML = finalDisplayMessage.join("<br>" + "<br>");
 
 // 6. how many items are made by their sellers? 
-// I want to target each object's property, "who_made"
+// 			I want to target each object's property, "who_made"
 //			(possible values: "someone_else" or "i_did")
 //			Then, return the items that have a value of "i_did"
 
@@ -168,25 +168,3 @@ var messageToDisplay = itemsBySeller.length + " were made by their sellers.";
 
 var g = document.getElementById('answerSix');
 g.innerHTML = messageToDisplay;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
